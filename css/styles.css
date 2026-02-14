@@ -1,0 +1,14 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.logo {
+    font-family: 'Raleway', sans-serif;
+    color: #2196F3;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.logo-text {
+    color: #000;
+}
