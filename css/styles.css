@@ -6,6 +6,7 @@
     --black: #000000;
     --h-text: #212121;
     --p-text: #757575;
+    --line: #ECECEC;
 }
 
 body {
@@ -27,8 +28,9 @@ header {
     color: var(--black);
 }
 
-.menu, h3 {
+.menu, h2, h3 {
     color: var(--h-text);
+    background-color: var(--main-background-color);
 }
 
 .contacts, p {
