@@ -7,10 +7,16 @@
     --h-text: #212121;
     --p-text: #757575;
     --line: #ECECEC;
+    --white: #FFFFFF;
+    --white-transparent:rgba(255,255,255,0.6)
 }
 
 body {
     font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
 }
 
 header {
@@ -48,9 +54,5 @@ header {
 }
 
 .logo-text-footer {
-    color: var(--white);
-}
-
-.contacts-footer {
     color: var(--white);
 }
