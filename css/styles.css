@@ -8,7 +8,7 @@
     --p-text: #757575;
     --line: #ECECEC;
     --white: #FFFFFF;
-    --white-transparent:rgba(255,255,255,0.6)
+    --white-transparent: rgba(255, 255, 255, 0.6)
 }
 
 body {
@@ -35,7 +35,9 @@ header {
     color: var(--black);
 }
 
-.nav, h2, h3 {
+.nav,
+h2,
+h3 {
     color: var(--h-text);
     background-color: var(--main-background-color);
     font-size: 14px;
@@ -43,7 +45,8 @@ header {
     background-color: var(--white);
 }
 
-.contacts, p {
+.contacts,
+p {
     color: var(--p-text);
     font-size: 14px;
     font-weight: medium;
@@ -55,7 +58,8 @@ h1 {
     text-align: center;
 }
 
-.hero, footer {
+.hero,
+footer {
     display: flex;
     flex-direction: column;
     background: var(--background-color);
@@ -96,11 +100,21 @@ h1 {
     font-weight: 500;
 }
 
-.team-role {
+.am-rolete {
     font-size: 16px;
     font-weight: 400;
 }
 
 .logo-accent-footer {
+    color: var(--white);
+}
+
+.footer-item {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--white-transparent);
+}
+
+.footer-contacts .footer-item:first-of-type {
     color: var(--white);
 }
