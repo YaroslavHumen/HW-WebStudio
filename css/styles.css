@@ -7,51 +7,70 @@
     --h-text: #212121;
     --p-text: #757575;
     --line: #ECECEC;
-    --white-transparent: rgba(255, 255, 255, 0.6)
+    --white-transparent: rgba(255, 255, 255, 0.6);
+ 
+    /* Тіні */
+    --shadow-button: 0px 2px 6px rgba(33, 150, 243, 0.25);
+    --shadow-button-hover: 0px 4px 10px rgba(33, 150, 243, 0.43);
+ 
+    --shadow-card: 0px 2px 8px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.08);
+    --shadow-card-hover: 0px 4px 12px rgba(0, 0, 0, 0.18), 0px 3px 7px rgba(0, 0, 0, 0.12);
+ 
+    --shadow-header: 0px 2px 6px rgba(0, 0, 0, 0.08);
+    --shadow-header-hover: 0px 4px 10px rgba(0, 0, 0, 0.14);
 }
-
+ 
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
-
+ 
 body {
     font-family: 'Roboto', sans-serif;
-
 }
-
+ 
 a {
     text-decoration: none;
 }
-
+ 
 ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
-
+ 
 header {
     background-color: var(--white);
     border-bottom: 1px solid var(--line);
+    /* Тінь хедера */
+    box-shadow: var(--shadow-header);
+    transition: box-shadow 0.3s ease;
 }
-
+ 
+header:hover {
+    /* При наведенні тінь збільшується на 2px */
+    box-shadow: var(--shadow-header-hover);
+}
+ 
 .container {
     width: 1160px;
-    margin: 0 auto; 
+    margin: 0 auto;
 }
-
+ 
 .header-container {
     padding-left: 4px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-
+ 
 .nav {
     display: flex;
     align-items: center;
     gap: 79px;
 }
-
+ 
 .logo-link {
     padding: 23px 0 26px 0;
     font-family: 'Raleway', sans-serif;
@@ -59,56 +78,57 @@ header {
     font-size: 26px;
     font-weight: 700;
 }
-
+ 
 .logo-accent {
     color: var(--black);
 }
-
+ 
 .nav-item-a {
     color: var(--h-text);
     font-size: 14px;
-    font-weight: medium;
+    font-weight: 500;
     background-color: var(--white);
+    transition: color 0.3s ease;
 }
-
+ 
 .nav-item-a:hover,
 .nav-item-a:focus,
-.nav-item-a:active, 
+.nav-item-a:active,
 .contacts-item-a:hover,
 .contacts-item-a:focus,
 .contacts-item-a:active {
     color: var(--brand-color);
 }
-
+ 
 .nav-list,
 .contacts-list {
     display: flex;
     gap: 50px;
 }
-
+ 
 .contacts-item-a,
 p {
     color: var(--p-text);
     font-size: 14px;
-    font-weight: medium;
+    font-weight: 500;
 }
-
+ 
 h1 {
     font-size: 44px;
     font-weight: 900;
     text-align: center;
 }
-
+ 
 main {
     background-color: var(--main-background-color);
 }
-
+ 
 .hero,
 footer {
     background-color: var(--background-color);
     color: var(--white);
 }
-
+ 
 .hero-section {
     width: 100%;
     height: 600px;
@@ -117,13 +137,13 @@ footer {
     justify-content: center;
     margin-bottom: 94px;
 }
-
+ 
 .hero-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-
+ 
 .hero-button {
     padding: 10px 31px;
     margin: 0 auto;
@@ -134,132 +154,152 @@ footer {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 700;
+    /* Тінь кнопки героя */
+    box-shadow: var(--shadow-button);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
-
+ 
+.hero-button:hover {
+    /* При наведенні тінь збільшується на 2px */
+    box-shadow: var(--shadow-button-hover);
+    transform: translateY(-1px);
+}
+ 
 .features-container {
     display: flex;
     margin-bottom: 94px;
 }
-
+ 
 h2,
 h3 {
     color: var(--h-text);
     font-size: 14px;
-    font-weight: medium;
+    font-weight: 500;
 }
-
+ 
 .features-list {
     display: flex;
     gap: 30px;
 }
-
+ 
 .features-item {
     width: 270px;
 }
-
+ 
 .features-title {
     font-size: 14px;
     font-weight: 700;
 }
-
+ 
 .features-text {
     font-size: 14px;
     font-weight: 400;
 }
-
+ 
 .section-title {
     margin-bottom: 50px;
 }
-
+ 
 .work-container {
     margin-bottom: 94px;
 }
-
+ 
 .work-list {
     display: flex;
     justify-content: space-between;
     gap: 30px;
 }
-
+ 
 .section-title {
     font-size: 36px;
     font-weight: 700;
     text-align: center;
 }
-
+ 
 .team-container {
     padding: 94px 0;
 }
-
+ 
 .team-name {
     font-size: 16px;
     font-weight: 500;
     margin: 0;
     padding: 30px 0 10px 0;
 }
-
+ 
 .team-list {
     display: flex;
     gap: 30px;
 }
-
+ 
 .team-item {
     text-align: center;
     padding-bottom: 30px;
+    /* Тінь картки команди */
+    box-shadow: var(--shadow-card);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
-
+ 
+.team-item:hover {
+    /* При наведенні тінь збільшується на 2px */
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-2px);
+}
+ 
 .team-role {
     font-size: 16px;
     font-weight: 400;
     margin: 0;
 }
-
+ 
 .logo-accent-footer {
     color: var(--white);
 }
-
+ 
 .footer-container {
     display: flex;
     flex-direction: column;
     padding: 60px 0;
     gap: 20px;
 }
-
+ 
 .footer-contacts {
     padding: 0;
     display: flex;
     flex-direction: column;
     gap: 9px;
 }
-
+ 
 .footer-item {
     font-size: 14px;
     font-weight: 400;
     color: var(--white-transparent);
 }
-
+ 
 .footer-contacts .footer-item:first-of-type {
     color: var(--white);
 }
-
-/* сторінка Портфоліо */
-
+ 
+/* ================================
+   Сторінка Портфоліо
+   ================================ */
+ 
 .main-portfolio {
     background-color: var(--white);
 }
-
+ 
 .portfolio {
     padding: 0;
     margin: 0;
 }
-
+ 
 .portfolio__filters {
     margin: 0;
     display: flex;
     padding: 94px 297px 50px 297px;
     gap: 8px;
 }
-
+ 
 .portfolio__button {
     padding: 8px 16px;
     border: 1px solid var(--main-background-color);
@@ -267,20 +307,30 @@ h3 {
     border-radius: 4px;
     font-size: 16px;
     font-weight: 500;
-
+    /* Початкова тінь кнопки фільтра */
+    box-shadow: var(--shadow-button);
+    transition: box-shadow 0.3s ease, border 0.3s ease,
+                background-color 0.3s ease, color 0.3s ease,
+                transform 0.3s ease;
 }
+ 
 .portfolio__button:hover {
-    border: 2px solid var(--brand-color);
+    /* При наведенні тінь збільшується на 2px */
+    box-shadow: var(--shadow-button-hover);
+    border: 1px solid var(--brand-color);
     cursor: pointer;
+    transform: translateY(-1px);
 }
+ 
 .portfolio__button:focus {
     background-color: var(--brand-color);
     border: 1px solid var(--brand-color);
     color: var(--white);
     cursor: pointer;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.43);
+    /* Тінь активної кнопки */
+    box-shadow: var(--shadow-button-hover);
 }
-
+ 
 .portfolio__list {
     display: flex;
     flex-wrap: wrap;
@@ -288,36 +338,43 @@ h3 {
     gap: 30px;
     margin-bottom: 94px;
 }
-
+ 
 .portfolio__item {
     flex: 0 1 calc((100% - 68px) / 3);
-    border: 1px solid var(--line); 
+    border: 1px solid var(--line);
+    /* Початкова тінь картки портфоліо */
+    box-shadow: var(--shadow-card);
+    transition: box-shadow 0.3s ease, border 0.3s ease, transform 0.3s ease;
 }
+ 
 .portfolio__item:hover {
-    border: 2px solid var(--brand-color);
+    /* При наведенні тінь збільшується на 2px */
+    box-shadow: var(--shadow-card-hover);
+    border: 1px solid var(--brand-color);
     cursor: pointer;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.43);
+    transform: translateY(-2px);
 }
+ 
 .portfolio__item:focus {
     background-color: var(--brand-color);
     border: 1px solid var(--brand-color);
     color: var(--white);
     cursor: pointer;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.43);
+    box-shadow: var(--shadow-card-hover);
 }
-
+ 
 .portfolio__image {
-    width: 100%;    
+    width: 100%;
 }
-
+ 
 .portfolio__title {
     font-size: 18px;
     font-weight: 700;
     margin: 20px 24px;
 }
-
+ 
 .portfolio__category {
-    font-style: 16px;
+    font-size: 16px;
     font-weight: 400;
     margin: 0 24px 20px 24px;
 }
