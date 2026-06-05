@@ -312,11 +312,14 @@ h3 {
     justify-content: center;
     fill: var(--svg);
     color: var(--svg);
+    stroke: var(--svg);
 }
 
 .social-link:hover {
     background-color: var(--brand-color);
     fill: var(--white);
+    color: var(--white);
+    stroke-color: var(--white);
 }
 
 .social-svg {
@@ -340,6 +343,7 @@ h3 {
 .client-svg:hover {
     cursor: pointer;
     fill: var(--brand-color);
+    stroke: var(--brand-color);
     color: var(--brand-color);
     box-shadow: var(--shadow-card-hover);
     transform: translateY(-2px);
